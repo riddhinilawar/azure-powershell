@@ -1,3 +1,66 @@
+## 14.5.0 - October 2025
+#### Az.FirmwareAnalysis 1.0.0
+* General availability for module Az.FirmwareAnalysis
+* Upgraded API support to include 2025-08-02
+* Added usage metric support via the Get-AzFirmwareAnalysisUsageMetric cmdlet
+
+#### Az.Network 7.21.0
+- Added deprecation warning for cmdlet 'Invoke-AzFirewallPacketCapture'
+* Added new cmdlet for Invoke PacketCaptureOperation on Azure Firewall
+    - 'Invoke-AzFirewallPacketCaptureOperation'
+* Updated cmdlet to add the mandatory property of 'Operation' and made all other properties not mandatory for Azure Firewall Packet Capture Parameters. Updated corresponding cmdlets.
+    - 'New-AzFirewallPacketCaptureParameter'
+* Added new cmdlet for List NetworkSecurityPerimeter ServiceTags
+    - 'Get-AzNetworkSecurityPerimeterServiceTag'
+* Added properties 'DedicatedBackendConnection', 'ValidateCertChainAndExpiry', 'ValidateSNI', and 'SniName' to Application Gateway Backend HTTP Settings, as well as support for them in the following cmdlets:
+    - 'New-AzApplicationGatewayBackendHttpSetting'
+    - 'Add-AzApplicationGatewayBackendHttpSetting'
+    - 'Set-AzApplicationGatewayBackendHttpSetting'
+* Added cmdlet 'Get-AzAllVirtualNetworkGatewayRadiusServerSecret' to fetch list of VirtualNetworkGateway VpnClientConfiguration Radius servers and corresponding radius secrets.
+* Added cmdlet 'Get-AzAllVpnServerConfigurationRadiusServerSecret ' to fetch list of VirtualWan VpnServerConfiguration Radius servers and corresponding radius secrets.
+
+#### Az.Sftp 0.1.0
+* First preview release for module Az.Sftp
+
+#### Az.SignalR 2.2.0
+* Added cmdlets for managing custom domains:
+    - New-AzSignalRCustomDomain: create or update a custom domain for SignalR
+    - Get-AzSignalRCustomDomain: get custom domain(s) for SignalR
+    - Remove-AzSignalRCustomDomain: remove a custom domain from SignalR
+    - Update-AzSignalRCustomDomain: update a custom domain of SignalR
+* Added cmdlets for managing custom certificates:
+    - New-AzSignalRCustomCertificate: create or update a custom certificate for SignalR
+    - Get-AzSignalRCustomCertificate: get custom certificate(s) for SignalR
+    - Remove-AzSignalRCustomCertificate: remove a custom certificate from SignalR
+    - Update-AzSignalRCustomCertificate: update a custom certificate of SignalR
+* Added support for managed identity to SignalR resource create and update cmdlets:
+    - New-AzSignalR: now supports -EnableSystemAssignedIdentity and -UserAssignedIdentity parameters
+    - Update-AzSignalR: now supports -EnableSystemAssignedIdentity and -UserAssignedIdentity parameters
+
+#### Az.Storage 9.2.0
+* Supported Zone and ZonePlacementPolicy on Storage accounts 
+    - 'New-AzStorageAccount'
+    - 'Set-AzStorageAccount'
+* Supported listing Storage SKU
+    - 'Get-AzStorageSku'
+* Supported enabling SMB Oauth on Storage accounts 
+    - 'New-AzStorageAccount'
+    - 'Set-AzStorageAccount'
+* Supported Enable Metrics when set object replication policy 
+    - 'Set-AzStorageObjectReplicationPolicy'
+
+#### Az.StorageCache 0.3.0
+* Added support for Import, AutoExport and AutoImport HSM Jobs
+
+#### Az.StorageDiscovery 1.0.0
+* General availability for module Az.StorageDiscovery
+
+#### Az.StorageMover 1.6.0
+* Added  support for new api version 2025-07-01
+* Included new endpoint types supported in the api version
+    * MultiCloudConnector
+    * NFSFileShare
+
 ## 14.4.0 - September 2025
 #### Az.Accounts 5.3.0
 * Updated 'AuthenticationAssemblyLoadContext' project to deprecate .NET 6.0 and build on .NET 8.0.
